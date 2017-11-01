@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_pattern"
-    android:padding="16dp"
+    android:padding="4dp"
     tools:context="com.loftscool.mooneytracker.MainActivity">
     <LinearLayout
         android:id="@+id/layout"
@@ -14,11 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:elevation="1dp"
+        android:elevation="8dp"
 
 
         >
         <EditText
+            android:background="@color/colorWhite"
             android:id="@+id/name"
             android:inputType="text"
             android:layout_weight="3"
@@ -29,6 +30,8 @@
             />
 
         <EditText
+            android:background="@color/colorWhite"
+            android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -39,7 +42,7 @@
             tools:ignore="RtlHardcoded" />
 
         <ImageButton
-            android:enabled="false"
+            android:clickable="false"
             android:id="@+id/add"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
