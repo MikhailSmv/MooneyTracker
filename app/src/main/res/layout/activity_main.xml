@@ -1,21 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_pattern"
+    android:padding="4dp"
     tools:context="com.loftscool.mooneytracker.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/layout"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:background="@color/colorGreen"
-        android:textSize="20sp"
-        android:textColor="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:elevation="8dp"
 
-</android.support.constraint.ConstraintLayout>
+
+        >
+        <EditText
+            android:background="@color/colorWhite"
+            android:id="@+id/name"
+            android:inputType="text"
+            android:layout_weight="3"
+            android:hint="@string/little_string"
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            android:background="@color/colorWhite"
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:hint="@string/price_string"
+            android:inputType="number"
+            android:maxLines="1"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageButton
+            android:clickable="false"
+            android:id="@+id/add"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:src="@drawable/ic_add_black_24dp" />
+    </LinearLayout>
+</FrameLayout>
